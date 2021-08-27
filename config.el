@@ -60,7 +60,6 @@
 (setq confirm-kill-emacs nil)
 
 (let ((alternatives '("doom-e-logo.png"
-                      "doom-emacs-bw-light.svg"
                       "emacs-e-logo.png"
                       "emacs-gnu-logo.png"
                       "I-am-doom.png")))
