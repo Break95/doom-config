@@ -37,8 +37,14 @@
 
 ;; (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 ;;(add-hook 'window-setup-hook #'toggle-frame-maximized)
-(add-hook 'window-setup-hook #'toggle-frame-fullscreen)
-
+(cond
+ ((string-equal system-type "gnu/linux")
+  (add-hook 'window-setup-hook #'toggle-frame-fullscreen)
+  )
+ ((string-equal system-type "darwin")
+  (add-hook 'window-setup-hook 'toggle-frame-maximized)
+  )
+)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
