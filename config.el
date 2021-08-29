@@ -59,11 +59,6 @@
 
 (setq confirm-kill-emacs nil)
 
-(let ((alternatives '("doom-e-logo.png"
-                      "emacs-e-logo.png"
-                      "emacs-gnu-logo.png"
-                      "I-am-doom.png")))
 
-  (setq fancy-splash-image
-        (concat doom-private-dir "banner/"
-                (nth (random (length alternatives)) alternatives))))
+(setq fancy-splash-image
+      (concat doom-private-dir "banner/doom-e-logo.png"))
