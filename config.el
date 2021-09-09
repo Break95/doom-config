@@ -62,3 +62,5 @@
 
 (setq fancy-splash-image
       (concat doom-private-dir "banner/doom-e-logo.png"))
+
+(setq projectile-project-search-path'("~/Code/"))
