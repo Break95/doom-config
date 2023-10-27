@@ -65,8 +65,20 @@
 
 (setq confirm-kill-emacs nil)
 
-
 (setq fancy-splash-image
       (concat doom-private-dir "banner/doom-e-logo.png"))
 
 (setq projectile-project-search-path'("~/Code/"))
+
+;; By default truncate long lines
+(setq-default truncate-lines nil)
+
+(add-hook 'python-mode-hook
+      (lambda ()
+        (setq indent-tabs-mode nil)
+        (setq tab-width 4)
+        (setq python-indent-offset 4)))
+
+(use-package-hook! lsp-mode
+	:post-config
+	(setq lsp-enable-on-type-formatting nil))
